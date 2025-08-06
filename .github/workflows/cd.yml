@@ -3,12 +3,17 @@ name: CD
 
 on:
   push:
-    branches: [ prod ]
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Deploy to Production
-        run: echo "Deploying to production environment..."
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy (placeholder)
+        run: |
+          echo "Deploying the application..."
+          # Add your deploy commands here, e.g.:
+          # scp, rsync, docker build/push, kubectl apply, etc.
