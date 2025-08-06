@@ -1,0 +1,14 @@
+
+name: CD
+
+on:
+  push:
+    branches: [ prod ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Production
+        run: echo "Deploying to production environment..."
