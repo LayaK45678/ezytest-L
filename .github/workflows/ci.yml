@@ -3,9 +3,7 @@ name: CI
 
 on:
   push:
-    branches: [main, dev, qa, prod]
-  pull_request:
-    branches: [main, dev, qa, prod]
+    branches: [main]
 
 jobs:
   build:
